@@ -329,6 +329,7 @@ function PercentBarField(props: TableFieldProps) {
 
     return <ProgressBar
         now={now}
+        label={now === 100 && props.torrent.uploadRatio> 0 ? props.torrent.uploadRatio.toFixed(4) : undefined}
         className="white-outline"
         animate={active} />;
 }
